@@ -1,0 +1,34 @@
+# Core
+fastapi
+uvicorn[standard]
+streamlit
+pydantic
+python-dotenv
+
+# AI/ML
+langchain
+langchain-groq
+langchain_community
+langchain-text-splitters
+langgraph
+chromadb
+sentence-transformers
+faiss-cpu
+
+# Data Processing
+pandas
+numpy
+
+# Cache & Queue
+redis
+celery
+
+# Monitoring & Logging
+prometheus-client
+python-json-logger
+
+# Utils
+httpx
+tenacity
+python-multipart
+plotly
