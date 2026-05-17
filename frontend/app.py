@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 import json
@@ -56,7 +57,10 @@ if "conversation_id" not in st.session_state:
     st.session_state.conversation_id = None
 
 # API endpoint
-API_URL = "http://localhost:8000"
+API_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+
+if API_URL.endswith("/"):
+    API_URL = API_URL[:-1]
 
 def send_message(query):
     """Send message to backend API"""

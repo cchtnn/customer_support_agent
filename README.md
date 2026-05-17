@@ -35,3 +35,15 @@ streamlit run frontend/app.py
 # and in another terminal:
 uvicorn backend.api.main:app --host 0.0.0.0 --port 8000
 ```
+
+5. **Run using Docker Compose**
+```bash
+docker-compose up --build
+```
+
+6. **Run frontend container directly**
+- If backend is running on the host at port 8000, start frontend with:
+```bash
+docker run -p 8501:8501 -e BACKEND_URL=http://host.docker.internal:8000 5114540/customer_agent_repo:frontend-latest
+```
+- If using Docker Compose, the frontend already receives `BACKEND_URL=http://backend:8000` from `docker-compose.yml`.
